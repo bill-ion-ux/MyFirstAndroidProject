@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <TextView
+        android:id="@+id/TVHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="@string/animal_lover_app"
+        android:textColor="@color/peach"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnCat"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:text="@string/meow"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/circular_cat_icon2"
+        app:iconGravity="textTop"
+        app:iconPadding="8dp"
+        app:iconSize="48dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/TVHomeTitle"
+        app:layout_constraintStart_toStartOf="@+id/TVHomeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/TVHomeTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnDog"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:text="@string/wang"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/circular_dog_icon"
+        app:iconGravity="textTop"
+        app:iconPadding="8dp"
+        app:iconSize="48dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/BtnCat"
+        app:layout_constraintStart_toStartOf="@+id/BtnCat"
+        app:layout_constraintTop_toBottomOf="@+id/BtnCat" />
+</androidx.constraintlayout.widget.ConstraintLayout>
