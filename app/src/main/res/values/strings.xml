@@ -43,4 +43,13 @@
     <string name="about_app">About App</string>
     <string name="home">home</string>
     <string name="about">About</string>
+    <string name="this_application_was_created_with_for_all_animal_lovers_n_nit_is_a_simple_demonstration_project_built_using_android_studio_showcasing_navigation_between_fragments_and_basic_user_interface_elements_n_nfeel_free_to_explore_and_enjoy_the_sounds">This application was created with ❤️ for all animal lovers. \n\nIt is a simple demonstration project built using Android Studio, showcasing navigation between fragments and basic user interface elements. \n\nFeel free to explore and enjoy the sounds!</string>
+    <string name="this_is_an_animal_lover_app">This is an animal Lover App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+
+
+
 </resources>
