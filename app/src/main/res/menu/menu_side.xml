@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group />
     <item
         android:title="@string/home"
+        android:id="@+id/DestHome"
+        android:icon="@drawable/ic_home"
         />
+
+    <item
+        android:title="@string/about_app"
+        android:icon="@drawable/ic_info"
+        android:id="@+id/DestAboutApp"
+        />
+    <group />
+    <item
+        android:id="@+id/DestCat"
+        android:title="@string/meow"
+        />
+    <item
+        android:title="@string/wang"
+        android:id="@+id/DestDog"
+        />
+
+
 
 </menu>

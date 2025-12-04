@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/DestHome"
         android:name="com.example.myfirstandroidproject.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_DestHome_to_DestDog"
             app:destination="@id/DestDog" />
@@ -20,16 +20,16 @@
     <fragment
         android:id="@+id/DestCat"
         android:name="com.example.myfirstandroidproject.CatFragment"
-        android:label="fragment_cat"
+        android:label="Cat"
         tools:layout="@layout/fragment_cat" />
     <fragment
         android:id="@+id/DestDog"
         android:name="com.example.myfirstandroidproject.DogFragment"
-        android:label="fragment_dog"
+        android:label="Dog"
         tools:layout="@layout/fragment_dog" />
     <fragment
         android:id="@+id/DestAboutApp"
         android:name="com.example.myfirstandroidproject.AboutAppFragment"
-        android:label="fragment_about_app"
+        android:label="@string/about_app"
         tools:layout="@layout/fragment_about_app" />
 </navigation>

@@ -8,6 +8,12 @@ android {
     compileSdk {
         version = release(36)
     }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            merges += "META-INF/androidx.cardview_cardview.version"
+        }
+    }
 
     defaultConfig {
         applicationId = "com.example.myfirstandroidproject"
@@ -36,21 +42,33 @@ android {
         jvmTarget = "11"
     }
 }
-
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.constraintlayout)
+
+    // Use the modern Navigation Component libraries
+    // CORRECT (stable versions)
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+
+    // Use the most up-to-date Material library
+    implementation("com.google.android.material:material:1.13.0")
+
+    // This is the modern replacement for the old cardview-v7
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    // The circle image view library
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // AdMob library (make sure you have the meta-data tag in AndroidManifest.xml)
     implementation(libs.play.services.ads)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.fragment)
+
+    // Testing libraries (no changes needed here)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.google.android.material:material:1.13.0")
-    implementation("de.hdodenhof:circleimageview:3.1.0")
 }

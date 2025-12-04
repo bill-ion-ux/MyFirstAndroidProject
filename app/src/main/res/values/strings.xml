@@ -47,9 +47,8 @@
     <string name="this_is_an_animal_lover_app">This is an animal Lover App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-
-
+    <string name="animal_lover">Animal Lover</string>
+    <string name="hug">hug</string>
 
 
 </resources>

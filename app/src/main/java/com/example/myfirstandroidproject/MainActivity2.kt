@@ -57,16 +57,20 @@ class MainActivity2 : AppCompatActivity() {
     // Its main purpose is to manage the side navigation menu (the "drawer").
     // It listens for swipe gestures from the edge of the screen to reveal the hidden
 
-        val drawerLayout: DrawerLayout = findViewById(id.main)//used for side nav
+        drawerLayout = findViewById(id.main)//used for side nav
         val sideNavView: NavigationView = findViewById(id.sideNav)
         val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_nav_view)
 
 
 //This line finds the specific androidx . fragment . app . Fragment that is designated as the "navigation host" in your layout.
-// It uses the supportFragmentManager (the Android system component that manages all Fragments in an Activity)
-// to look for a view with the ID 'fragmentContainerView' inside your activity_main2.xml layout.
-// Since we know this container is a special NavHostFragment, we cast it using 'as NavHostFragment'
-// to get access to its navigation-specific properties.
+//  It uses the supportFragmentManager (the Android system component that manages all Fragments in an Activity)
+//  to look for a view with the ID 'fragmentContainerView' inside your activity_main2.xml layout.
+//  Since we know this container is a special NavHostFragment, we cast it using 'as NavHostFragment'
+//  to get access to its navigation-specific properties.
+//  Loads the graph
+//  Displays the active destination
+//  Manages the back stack automatically
+
         val navHostFragment = supportFragmentManager.findFragmentById(id.fragmentContainerView) as NavHostFragment
 
 // Once we have the NavHostFragment (the "stage"), this line gets its associated NavController (the "stage manager").
@@ -78,16 +82,17 @@ class MainActivity2 : AppCompatActivity() {
         // Define top-level destinations for AppBarConfiguration so the hamburger icon appears.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                id.homeFragment
+                id.DestHome,
+                id.DestAboutApp
             ), drawerLayout
         )
         // Add hamburger toggle
-        val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar,
-            R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+//        toggle = ActionBarDrawerToggle(
+//            this, drawerLayout, toolbar,
+//            R.string.navigation_drawer_open, R.string.navigation_drawer_close
+//        )
+//        drawerLayout.addDrawerListener(toggle)
+//        toggle.syncState()
 
         // This is a key function that connects your app's top Toolbar/ActionBar to the NavController.
         // It automatically does two main things:
@@ -111,8 +116,10 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-        }
+        // This line is crucial. It tells NavigationUI to try to navigate up in the navigation graph first.
+        // If that's not possible (because you are on a top-level destination), it will open the navigation drawer.
+        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
+    }
 
 
 }
