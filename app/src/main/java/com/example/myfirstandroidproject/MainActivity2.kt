@@ -114,7 +114,6 @@ class MainActivity2 : AppCompatActivity() {
         bottomNavView.setupWithNavController(navController)
 
     }
-
     override fun onSupportNavigateUp(): Boolean {
         // This line is crucial. It tells NavigationUI to try to navigate up in the navigation graph first.
         // If that's not possible (because you are on a top-level destination), it will open the navigation drawer.

@@ -66,6 +66,8 @@ dependencies {
 
     // AdMob library (make sure you have the meta-data tag in AndroidManifest.xml)
     implementation(libs.play.services.ads)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     // Testing libraries (no changes needed here)
     testImplementation(libs.junit)
